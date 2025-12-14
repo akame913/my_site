@@ -4,6 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>世界の三大宗教の比較</title>
+    <!-- Tailwind CSS CDNをロード -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Googleのブランドカラー定義 */
+        .google-blue { --tw-bg-opacity: 1; background-color: rgb(66 133 244 / var(--tw-bg-opacity)); }
+        .google-blue-text { color: rgb(66 133 244); }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 flex justify-center">
+
+    <div id="app" class="w-full max-w-4xl bg-white shadow-xl rounded-2xl overflow-hidden">
+
+        <!-- ヘッダー -->
+        <header class="google-blue text-white p-6 sm:p-8">
+            <h1 class="text-3xl font-bold">キリスト教、イスラム教、仏教の比較</h1>
+            <p class="text-blue-200 mt-1">キリスト教、イスラム教、仏教は「世界三大宗教」と称され、世界中で多くの人々に信仰されています。これらの宗教は、それぞれが独自の歴史、価値観、世界観を持っています。このページでは、その主な特徴と違いを比較します。</p>
+        </header>
+
+        <!-- メインコンテンツ -->
+        <main class="p-6 sm:p-8">
+            <!--
+            <div class="space-y-6">
+                <p class="text-gray-700 leading-relaxed">
+                    このページは、Google Blueをテーマにした情報を含みます。青色は、Web検索、マップ、クラウドサービスなどの主要なGoogleプロダクトの核となる色であり、信頼性と技術の深さを象徴しています。
+                </p>
+
+                <div class="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 rounded-md">
+                    <h3 class="text-xl font-semibold google-blue-text mb-2">主要なトピック</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li>データ分析の進化: ビッグデータの処理とインサイト抽出技術。</li>
+                        <li>クラウドコンピューティングの未来: スケーラブルなインフラストラクチャとセキュリティ。</li>
+                        <li>新しいAI技術の動向: 大規模言語モデルと機械学習の応用事例。</li>
+                    </ul>
+                </div>
+
+                <p class="text-gray-700 italic">
+                    デジタル時代の基盤となるサービスについて深く掘り下げています。
+                </p>
+            </div>
+        -->
+        
+            <h2>特徴比較表</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>項目</th>
+                <th>キリスト教</th>
+                <th>イスラム教</th>
+                <th>仏教</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>起源・場所</strong></td>
+                <td>1世紀頃・パレスチナ地方</td>
+                <td>7世紀初頭・アラビア半島</td>
+                <td>紀元前5世紀頃・インド</td>
+            </tr>
+            <tr>
+                <td><strong>開祖</strong></td>
+                <td>イエス・キリスト</td>
+                <td>ムハンマド</td>
+                <td>釈迦（ゴータマ・シッダールタ）</td>
+            </tr>
+            <tr>
+                <td><strong>神の概念</strong></td>
+                <td>唯一神（父なる神、子、聖霊の三位一体）</td>
+                <td>唯一神（アッラー）</td>
+                <td>唯一絶対の創造神は存在しない</td>
+            </tr>
+            <tr>
+                <td><strong>聖典</strong></td>
+                <td>聖書（旧約聖書・新約聖書）</td>
+                <td>クルアーン（コーラン）</td>
+                <td>仏典（経典）</td>
+            </tr>
+            <tr>
+                <td><strong>教えの中心</strong></td>
+                <td>神の愛と隣人愛。イエスの贖罪による救い。</td>
+                <td>神への絶対的服従。六信（信仰）と五行（実践）。</td>
+                <td>自己の修行による悟りと苦からの解放（解脱）。</td>
+            </tr>
+            <tr>
+                <td><strong>救済の考え方</strong></td>
+                <td>信仰によって神から救われる（他力救済）</td>
+                <td>神の教えの実践によって救われる</td>
+                <td>自らの修行によって悟りを開く（自力救済）</td>
+            </tr>
+            <tr>
+                <td><strong>開祖の位置づけ</strong></td>
+                <td>神の子・救い主</td>
+                <td>神の言葉を伝えた最後の預言者</td>
+                <td>真理に目覚めた人（仏陀）</td>
+            </tr>
+            <tr>
+                <td><strong>偶像崇拝</strong></td>
+                <td>カトリック等では聖像を用いるが、プロテスタントでは否定的な宗派も多い。</td>
+                <td>厳格に禁止されている。</td>
+                <td>仏像を信仰の対象とする。</td>
+            </tr>
+            <tr>
+                <td><strong>死生観</strong></td>
+                <td>最後の審判の後、天国か地獄へ。</td>
+                <td>最後の審判の後、天国か地獄へ。</td>
+                <td>悟りを開くまで輪廻転生を繰り返す。</td>
+            </tr>
+            <tr>
+                <td><strong>信者数（推定）</strong></td>
+                <td>約24億人</td>
+                <td>約19億人</td>
+                <td>約5億人</td>
+            </tr>
+        </tbody>
+    </table>
+
+            <!-- メニューに戻るボタン -->
+            <div class="mt-8 text-center">
+                <a href="index.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white google-blue hover:bg-blue-600 transition duration-150 ease-in-out">
+                    メニューに戻る
+                </a>
+            </div>
+        </main>
+
+        <!-- フッター -->
+        <footer class="p-4 text-center text-sm text-gray-400 border-t border-gray-100 mt-4">
+            &copy; 2025 コンテンツ 1 ページ.
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!--
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界の三大宗教の比較</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -130,17 +284,4 @@
             </tr>
         </tbody>
     </table>
-
-    <!-- メニューに戻るボタン -->
-    <div class="mt-8 text-center">
-        <a href="index.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white google-yellow hover:bg-yellow-600 transition duration-150 ease-in-out">
-                メニューに戻る
-        </a>
-    </div>
-
-    <div class="footer">
-        <p>このページは、ウェブ検索によって収集された情報に基づき作成されました。</p>
-    </div>
-
-</body>
-</html>
+-->
