@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仏像の世界：階層と役割を解き明かすインフォグラフィック</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #FFFFEA;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Sawarabi Mincho', serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-arrow::after {
+            content: '→';
+            font-size: 2rem;
+            color: #00CECB;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="bg-[#FFFFEA] text-[#000000]">
+
+    <header class="text-center p-8 md:p-12 bg-[#00CECB]">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-2">仏像の世界</h1>
+        <p class="text-lg md:text-xl text-white">その階層と役割を解き明かす</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="hierarchy" class="mb-16">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 text-center">
+                <h2 class="text-3xl font-bold mb-2 text-[#FF5E5B]">仏像の階層構造</h2>
+                <p class="max-w-3xl mx-auto mb-8 text-gray-700">仏像は単なる美術品ではありません。悟りの段階や衆生救済の役割に応じた明確な階層が存在します。このシステムは、仏教の広大な世界観と救済の仕組みを視覚的に表現しています。</p>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="text-center">
+                        <div class="bg-[#FF5E5B] text-white rounded-full w-24 h-24 flex items-center justify-center text-xl font-bold shadow-md">如来</div>
+                        <p class="mt-2 font-semibold">教え</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block"></div>
+                    <div class="text-center">
+                        <div class="bg-[#00CECB] text-white rounded-full w-24 h-24 flex items-center justify-center text-xl font-bold shadow-md">菩薩</div>
+                        <p class="mt-2 font-semibold">実践</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block"></div>
+                    <div class="text-center">
+                        <div class="bg-gray-700 text-white rounded-full w-24 h-24 flex items-center justify-center text-xl font-bold shadow-md">明王</div>
+                        <p class="mt-2 font-semibold">強制</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block"></div>
+                     <div class="text-center">
+                        <div class="bg-yellow-500 text-white rounded-full w-24 h-24 flex items-center justify-center text-xl font-bold shadow-md">天部</div>
+                        <p class="mt-2 font-semibold">守護</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="classes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-bold text-[#FF5E5B] mb-4">I. 如来</h3>
+                <p class="text-gray-600">悟りを開いた最高位の存在。質素な衣をまとい、螺髪や白毫など超人的な特徴を持つ。究極の真理と慈悲の象徴です。</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-bold text-[#00CECB] mb-4">II. 菩薩</h3>
+                <p class="text-gray-600">如来を目指し修行中の身。華やかな装飾品を身につけ、人々に寄り添い、慈悲の心で衆生を救済します。</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-bold text-gray-700 mb-4">III. 明王</h3>
+                <p class="text-gray-600">大日如来の化身。忿怒の相で仏の教えに従わない者を力づくで導き、煩悩や悪を打ち砕く守護者です。</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-bold text-yellow-500 mb-4">IV. 天部</h3>
+                <p class="text-gray-600">仏法を守護する神々。元はインドの神々で、武将や貴族の姿で表され、現世利益をもたらします。</p>
+            </div>
+        </section>
+        
+        <section id="nyorai-deep-dive" class="mb-16">
+            <h2 class="text-4xl font-display text-center mb-8 text-[#FF5E5B]">如来：悟りの頂点</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-lg shadow-xl p-6">
+                    <h3 class="text-2xl font-bold mb-4">代表的な如来</h3>
+                    <p class="text-gray-700 mb-4">如来には様々な種類があり、それぞれが異なる役割と功徳を持ちます。釈迦如来は仏教の開祖、薬師如来は病を癒し、阿弥陀如来は人々を極楽浄土へ導きます。</p>
+                    <div class="chart-container">
+                        <canvas id="nyoraiChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6">
+                    <h3 class="text-2xl font-bold mb-2">東大寺盧舎那仏像</h3>
+                    <p class="text-sm text-gray-500 mb-4">奈良の大仏</p>
+                    <p id="daibutsuDescription" class="text-gray-700 mb-4">聖武天皇の発願により建立された、宇宙の真理そのものを表す盧舎那仏。その巨大な姿と穏やかな表情は、普遍的な慈悲を象徴しています。蓮華座に描かれた線刻画には、壮大な仏教の世界観が表現されています。</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <button id="ttsButtonDaibutsu" class="flex items-center text-[#00CECB] font-bold py-2 px-4 rounded-full border-2 border-[#00CECB] hover:bg-[#00CECB] hover:text-white transition-colors duration-300">
+                            <span class="mr-2">🔊</span> 説明を聞く
+                        </button>
+                        <button id="storyButtonDaibutsu" class="flex items-center text-[#FF5E5B] font-bold py-2 px-4 rounded-full border-2 border-[#FF5E5B] hover:bg-[#FF5E5B] hover:text-white transition-colors duration-300">
+                            <span class="mr-2">✨</span> 物語を生成
+                        </button>
+                    </div>
+                    <div id="loadingDaibutsu" class="hidden text-center text-gray-500">
+                        <svg class="animate-spin h-5 w-5 mr-3 inline text-[#FF5E5B]" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        生成中...
+                    </div>
+                    <div id="storyContainerDaibutsu" class="hidden mt-4 p-4 bg-gray-100 rounded-lg text-gray-800 text-left whitespace-pre-wrap"></div>
+                    <div class="mt-4 text-center">
+                        <p class="text-lg font-semibold">印相：施無畏・与願印</p>
+                        <p class="text-gray-600">「恐れなくてよい」「願いを叶えよう」というメッセージを示します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bosatsu-deep-dive" class="mb-16">
+            <h2 class="text-4xl font-display text-center mb-8 text-[#00CECB]">菩薩：慈悲の実践者</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-lg shadow-xl p-6 order-2 md:order-1">
+                     <h3 class="text-2xl font-bold mb-2">広隆寺弥勒菩薩半跏思惟像</h3>
+                    <p class="text-sm text-gray-500 mb-4">宝冠弥勒</p>
+                    <p id="mirokuDescription" class="text-gray-700 mb-4">56億7000万年後に現れ人々を救う未来仏、弥勒菩薩。右手を頬に当て思索にふける姿は、いかにして衆生を救うか深く思案する慈悲の心を表現しています。そのアルカイックスマイルは、時代を超えて人々を魅了します。</p>
+                    <button id="ttsButtonMiroku" class="w-full flex items-center justify-center text-[#00CECB] font-bold py-2 px-4 rounded-full border-2 border-[#00CECB] hover:bg-[#00CECB] hover:text-white transition-colors duration-300">
+                        <span class="mr-2">🔊</span> 説明を聞く
+                    </button>
+                    <div class="mt-4 text-center">
+                         <p class="text-5xl font-bold text-[#00CECB]">56.7</p>
+                         <p class="text-lg font-semibold">億年後に救済へ</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6 order-1 md:order-2">
+                    <h3 class="text-2xl font-bold mb-4">多様な菩薩の役割</h3>
+                    <p class="text-gray-700 mb-4">菩薩は、智慧、慈悲、実践など、様々な徳を象徴します。観音菩薩は33の姿に変化して人々を救い、地蔵菩薩は子供たちの守り神として親しまれています。</p>
+                    <div class="chart-container h-[400px] md:h-[350px]">
+                        <canvas id="bosatsuChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="myoo-deep-dive" class="mb-16">
+            <h2 class="text-4xl font-display text-center mb-8 text-gray-700">明王：忿怒の守護者</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                 <div class="bg-white rounded-lg shadow-xl p-6">
+                    <h3 class="text-2xl font-bold mb-4">五大明王の力</h3>
+                    <p class="text-gray-700 mb-4">不動明王を中心とする五大明王は、それぞれが強力な力で煩悩を打ち破り、仏敵を降伏させます。その力は、慈悲の厳格な側面を象徴しています。</p>
+                    <div class="chart-container">
+                        <canvas id="myooChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6">
+                    <h3 class="text-2xl font-bold mb-2">東寺不動明王坐像</h3>
+                    <p class="text-sm text-gray-500 mb-4">日本最古の不動明王</p>
+                    <p id="fudoDescription" class="text-gray-700 mb-4">空海が伝えた密教の世界観を具現化した立体曼荼羅の中心。燃え盛る火炎を背負い、右手には煩悩を断ち切る剣、左手には人々を救いとる羂索を持ちます。その厳しい表情の奥には、衆生を救わんとする不動の決意と深い慈悲が秘められています。</p>
+                    <button id="ttsButtonFudo" class="w-full flex items-center justify-center text-[#00CECB] font-bold py-2 px-4 rounded-full border-2 border-[#00CECB] hover:bg-[#00CECB] hover:text-white transition-colors duration-300">
+                        <span class="mr-2">🔊</span> 説明を聞く
+                    </button>
+                    <div class="mt-4 text-center">
+                        <p class="text-lg font-semibold">役割：教令輪身</p>
+                        <p class="text-gray-600">大日如来の命令を受け、力で教えを諭す存在。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tenbu-deep-dive" class="mb-16">
+            <h2 class="text-4xl font-display text-center mb-8 text-yellow-500">天部：仏法の護法神</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                 <div class="bg-white rounded-lg shadow-xl p-6 order-2 md:order-1">
+                    <h3 class="text-2xl font-bold mb-2">興福寺阿修羅像</h3>
+                    <p class="text-sm text-gray-500 mb-4">天平の美少年</p>
+                    <p id="ashuraDescription" class="text-gray-700 mb-4">元は帝釈天と争う闘争の神でしたが、釈迦の説法に心打たれ仏法を守る神となりました。三つの顔と六本の腕を持つ少年のような姿は、内面の葛藤と信仰への目覚めを表現しているとされます。脱活乾漆造の技法が生み出すリアルな質感も魅力です。</p>
+                    <button id="ttsButtonAshura" class="w-full flex items-center justify-center text-[#00CECB] font-bold py-2 px-4 rounded-full border-2 border-[#00CECB] hover:bg-[#00CECB] hover:text-white transition-colors duration-300">
+                        <span class="mr-2">🔊</span> 説明を聞く
+                    </button>
+                    <div class="mt-4 text-center">
+                        <p class="text-lg font-semibold">三面：葛藤と決意の表情</p>
+                        <p class="text-gray-600">正面、左、右で異なる表情は、心の成長過程を示します。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6 order-1 md:order-2">
+                    <h3 class="text-2xl font-bold mb-4">須弥山の守護者：四天王</h3>
+                    <p class="text-gray-700 mb-4">仏教世界の中心、須弥山の四方を守る武神たち。それぞれが配下の軍勢を率い、仏法を外敵から守ります。</p>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="text-4xl">⬆️</p>
+                            <p class="font-bold">多聞天 (北)</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="text-4xl">⬇️</p>
+                            <p class="font-bold">増長天 (南)</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="text-4xl">⬅️</p>
+                            <p class="font-bold">広目天 (西)</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="text-4xl">➡️</p>
+                            <p class="font-bold">持国天 (東)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <p>&copy; 2025 仏像の世界インフォグラフィック. All rights reserved.</p>
+        <p class="text-xs text-gray-400 mt-1">このインフォグラフィックは提供された資料に基づき作成されました。</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const FONT_COLOR = '#000000';
+            const GRID_COLOR = '#D8D8D8';
+            
+            const PALETTE = {
+                red: '#FF5E5B',
+                cream: '#FFFFEA',
+                gray: '#D8D8D8',
+                teal: '#00CECB',
+                black: '#000000',
+                yellow: '#FBBF24'
+            };
+
+            const wrapLabel = (label, maxWidth = 16) => {
+                if (label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + word).length > maxWidth) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                }
+                lines.push(currentLine.trim());
+                return lines;
+            };
+            
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+
+            const defaultOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: FONT_COLOR,
+                            font: {
+                                family: "'Noto Sans JP', sans-serif"
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        ticks: { color: FONT_COLOR },
+                        grid: { color: GRID_COLOR }
+                    },
+                    x: {
+                        ticks: { color: FONT_COLOR },
+                        grid: { color: GRID_COLOR }
+                    }
+                }
+            };
+
+            const initNyoraiChart = () => {
+                const ctx = document.getElementById('nyoraiChart');
+                if (!ctx) return;
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['阿弥陀如来 (救済)', '薬師如来 (治癒)', '釈迦如来 (教え)', '大日如来 (真理)'],
+                        datasets: [{
+                            label: '代表的な如来',
+                            data: [40, 25, 20, 15],
+                            backgroundColor: [PALETTE.red, PALETTE.teal, PALETTE.yellow, PALETTE.gray],
+                            borderColor: PALETTE.cream,
+                            borderWidth: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    color: FONT_COLOR,
+                                    font: { family: "'Noto Sans JP', sans-serif" }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: tooltipTitleCallback
+                                }
+                            }
+                        }
+                    }
+                });
+            };
+
+            const initBosatsuChart = () => {
+                const ctx = document.getElementById('bosatsuChart');
+                if (!ctx) return;
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: [
+                            wrapLabel('観音菩薩 (変化自在の救済者)'), 
+                            wrapLabel('地蔵菩薩 (子供と衆生の守護者)'), 
+                            wrapLabel('文殊菩薩 (智慧の象徴)'), 
+                            wrapLabel('普賢菩薩 (慈悲と実践の象徴)')
+                        ],
+                        datasets: [{
+                            label: '菩薩の役割 (象徴度)',
+                            data: [90, 85, 75, 70],
+                            backgroundColor: PALETTE.teal,
+                            borderColor: PALETTE.teal,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        ...defaultOptions,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: { color: FONT_COLOR },
+                                grid: { color: GRID_COLOR }
+                            },
+                            y: {
+                                ticks: { color: FONT_COLOR },
+                                grid: { color: 'transparent' }
+                            }
+                        },
+                         plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    title: tooltipTitleCallback
+                                }
+                            }
+                        }
+                    }
+                });
+            };
+
+            const initMyooChart = () => {
+                const ctx = document.getElementById('myooChart');
+                if (!ctx) return;
+                new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['忿怒', '武力', '調伏力', '慈悲', '智慧'],
+                        datasets: [{
+                            label: '不動明王',
+                            data: [9, 8, 9, 7, 6],
+                            fill: true,
+                            backgroundColor: 'rgba(255, 94, 91, 0.2)',
+                            borderColor: PALETTE.red,
+                            pointBackgroundColor: PALETTE.red,
+                        }, {
+                            label: '降三世明王',
+                            data: [8, 9, 8, 5, 7],
+                            fill: true,
+                            backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                            borderColor: PALETTE.black,
+                            pointBackgroundColor: PALETTE.black,
+                        }]
+                    },
+                    options: {
+                        ...defaultOptions,
+                        scales: {
+                            r: {
+                                angleLines: { color: GRID_COLOR },
+                                grid: { color: GRID_COLOR },
+                                pointLabels: {
+                                    color: FONT_COLOR,
+                                    font: { family: "'Noto Sans JP', sans-serif" }
+                                },
+                                ticks: {
+                                    color: FONT_COLOR,
+                                    backdropColor: 'transparent'
+                                }
+                            }
+                        }
+                    }
+                });
+            };
+
+            // Gemini API Integration - Story Generation
+            const storyButton = document.getElementById('storyButtonDaibutsu');
+            const storyContainer = document.getElementById('storyContainerDaibutsu');
+            const loadingIndicator = document.getElementById('loadingDaibutsu');
+            
+            const generateStory = async (statueName, context) => {
+                storyContainer.textContent = '';
+                storyContainer.classList.add('hidden');
+                loadingIndicator.classList.remove('hidden');
+
+                const prompt = `${statueName}の仏像にまつわる、感動的で心温まる短い物語を生成してください。仏像がどのようにして人々の心を救い、導いたかを中心に描写してください。コンテキスト：${context}`;
+
+                try {
+                    const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                    const payload = { contents: chatHistory };
+                    const apiKey = "";
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+                    let response = await retryWithBackoff(() => fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    }));
+                    
+                    const result = await response.json();
+                    
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        const text = result.candidates[0].content.parts[0].text;
+                        storyContainer.textContent = text;
+                        storyContainer.classList.remove('hidden');
+                    } else {
+                        storyContainer.textContent = "物語の生成に失敗しました。もう一度お試しください。";
+                        storyContainer.classList.remove('hidden');
+                    }
+                } catch (error) {
+                    console.error("Error generating story:", error);
+                    storyContainer.textContent = "エラーが発生しました。もう一度お試しください。";
+                    storyContainer.classList.remove('hidden');
+                } finally {
+                    loadingIndicator.classList.add('hidden');
+                }
+            };
+            
+            if(storyButton) {
+                storyButton.addEventListener('click', () => {
+                    const statueName = "東大寺盧舎那仏像";
+                    const context = document.getElementById('daibutsuDescription').textContent;
+                    generateStory(statueName, context);
+                });
+            }
+
+            // Gemini API Integration - TTS
+            const ttsButtons = {
+                daibutsu: document.getElementById('ttsButtonDaibutsu'),
+                miroku: document.getElementById('ttsButtonMiroku'),
+                fudo: document.getElementById('ttsButtonFudo'),
+                ashura: document.getElementById('ashuraDescription'),
+            };
+
+            const descriptions = {
+                daibutsu: document.getElementById('daibutsuDescription'),
+                miroku: document.getElementById('mirokuDescription'),
+                fudo: document.getElementById('fudoDescription'),
+                ashura: document.getElementById('ashuraDescription'),
+            };
+
+            let audioContext = null;
+
+            const createAudioContext = () => {
+                // Ensure the AudioContext is created by a user gesture
+                if (!audioContext) {
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                return audioContext;
+            };
+
+            const base64ToBuffer = (base64) => {
+                const binaryString = atob(base64);
+                const len = binaryString.length;
+                const bytes = new Uint8Array(len);
+                for (let i = 0; i < len; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                return bytes.buffer;
+            };
+
+            const retryWithBackoff = async (apiCall, retries = 3, delay = 1000) => {
+                try {
+                    return await apiCall();
+                } catch (error) {
+                    if (retries > 0) {
+                        await new Promise(res => setTimeout(res, delay));
+                        return retryWithBackoff(apiCall, retries - 1, delay * 2);
+                    } else {
+                        throw error;
+                    }
+                }
+            };
+
+            const generateAndPlayAudio = async (text) => {
+                const payload = {
+                    contents: [{
+                        parts: [{ text: text }]
+                    }],
+                    generationConfig: {
+                        responseModalities: ["AUDIO"],
+                        speechConfig: {
+                            voiceConfig: {
+                                prebuiltVoiceConfig: { voiceName: "Kore" }
+                            }
+                        }
+                    },
+                };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+
+                try {
+                    const response = await retryWithBackoff(() => fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    }));
+                    const result = await response.json();
+                    
+                    const part = result?.candidates?.[0]?.content?.parts?.[0];
+                    const audioData = part?.inlineData?.data;
+                    
+                    if (audioData) {
+                        const buffer = base64ToBuffer(audioData);
+                        const audioBuffer = await createAudioContext().decodeAudioData(buffer);
+                        
+                        const source = createAudioContext().createBufferSource();
+                        source.buffer = audioBuffer;
+                        source.connect(createAudioContext().destination);
+                        source.start();
+                    } else {
+                        console.error("Failed to retrieve audio data:", result);
+                    }
+                } catch (error) {
+                    console.error("Error generating or playing audio:", error);
+                }
+            };
+            
+            if(ttsButtons.daibutsu) ttsButtons.daibutsu.addEventListener('click', () => generateAndPlayAudio(descriptions.daibutsu.textContent));
+            if(ttsButtons.miroku) ttsButtons.miroku.addEventListener('click', () => generateAndPlayAudio(descriptions.miroku.textContent));
+            if(ttsButtons.fudo) ttsButtons.fudo.addEventListener('click', () => generateAndPlayAudio(descriptions.fudo.textContent));
+            if(ttsButtons.ashura) ttsButtons.ashura.addEventListener('click', () => generateAndPlayAudio(descriptions.ashura.textContent));
+
+            initNyoraiChart();
+            initBosatsuChart();
+            initMyooChart();
+        });
+    </script>
+</body>
+</html>
