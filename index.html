@@ -3,137 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>世界の三大宗教の比較</title>
+    <title>Googleカラースタイル付きタブコンテンツ - メニュー</title>
+    <!-- Tailwind CSS CDNをロード -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Googleのブランドカラー定義 */
+        .google-blue { --tw-bg-opacity: 1; background-color: rgb(66 133 244 / var(--tw-bg-opacity)); }
+        .google-red { --tw-bg-opacity: 1; background-color: rgb(234 67 53 / var(--tw-bg-opacity)); }
+        .google-yellow { --tw-bg-opacity: 1; background-color: rgb(251 188 5 / var(--tw-bg-opacity)); }
+        .google-green { --tw-bg-opacity: 1; background-color: rgb(52 168 83 / var(--tw-bg-opacity)); }
+
+        .google-blue-text { color: rgb(66 133 244); }
+        .google-red-text { color: rgb(234 67 53); }
+        .google-yellow-text { color: rgb(251 188 5); }
+        .google-green-text { color: rgb(52 168 83); }
+
+        /* スタイルベース */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 960px;
-            margin: 20px auto;
-            padding: 0 20px;
-            background-color: #f9f9f9;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* 非常に明るいグレー */
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+            min-height: 100vh;
         }
-        h1, h2 {
-            text-align: center;
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+
+        .menu-link {
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px; /* ボタンの高さを固定 */
+            border-radius: 0.75rem;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        th, td {
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
-            background-color: #3498db;
-            color: #fff;
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #e9ecef;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #777;
+
+        .menu-link:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
         }
     </style>
 </head>
-<body>
+<body class="p-4 sm:p-8">
 
-    <h1>キリスト教、イスラム教、仏教の比較</h1>
-    <p>
-        キリスト教、イスラム教、仏教は「世界三大宗教」と称され、世界中で多くの人々に信仰されています。これらの宗教は、それぞれが独自の歴史、価値観、世界観を持っています。このページでは、その主な特徴と違いを比較します。
-    </p>
+    <div id="app" class="w-full max-w-4xl bg-white shadow-xl rounded-2xl overflow-hidden p-6 sm:p-8">
 
-    <h2>特徴比較表</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>項目</th>
-                <th>キリスト教</th>
-                <th>イスラム教</th>
-                <th>仏教</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>起源・場所</strong></td>
-                <td>1世紀頃・パレスチナ地方</td>
-                <td>7世紀初頭・アラビア半島</td>
-                <td>紀元前5世紀頃・インド</td>
-            </tr>
-            <tr>
-                <td><strong>開祖</strong></td>
-                <td>イエス・キリスト</td>
-                <td>ムハンマド</td>
-                <td>釈迦（ゴータマ・シッダールタ）</td>
-            </tr>
-            <tr>
-                <td><strong>神の概念</strong></td>
-                <td>唯一神（父なる神、子、聖霊の三位一体）</td>
-                <td>唯一神（アッラー）</td>
-                <td>唯一絶対の創造神は存在しない</td>
-            </tr>
-            <tr>
-                <td><strong>聖典</strong></td>
-                <td>聖書（旧約聖書・新約聖書）</td>
-                <td>クルアーン（コーラン）</td>
-                <td>仏典（経典）</td>
-            </tr>
-            <tr>
-                <td><strong>教えの中心</strong></td>
-                <td>神の愛と隣人愛。イエスの贖罪による救い。</td>
-                <td>神への絶対的服従。六信（信仰）と五行（実践）。</td>
-                <td>自己の修行による悟りと苦からの解放（解脱）。</td>
-            </tr>
-            <tr>
-                <td><strong>救済の考え方</strong></td>
-                <td>信仰によって神から救われる（他力救済）</td>
-                <td>神の教えの実践によって救われる</td>
-                <td>自らの修行によって悟りを開く（自力救済）</td>
-            </tr>
-            <tr>
-                <td><strong>開祖の位置づけ</strong></td>
-                <td>神の子・救い主</td>
-                <td>神の言葉を伝えた最後の預言者</td>
-                <td>真理に目覚めた人（仏陀）</td>
-            </tr>
-            <tr>
-                <td><strong>偶像崇拝</strong></td>
-                <td>カトリック等では聖像を用いるが、プロテスタントでは否定的な宗派も多い。</td>
-                <td>厳格に禁止されている。</td>
-                <td>仏像を信仰の対象とする。</td>
-            </tr>
-            <tr>
-                <td><strong>死生観</strong></td>
-                <td>最後の審判の後、天国か地獄へ。</td>
-                <td>最後の審判の後、天国か地獄へ。</td>
-                <td>悟りを開くまで輪廻転生を繰り返す。</td>
-            </tr>
-            <tr>
-                <td><strong>信者数（推定）</strong></td>
-                <td>約24億人</td>
-                <td>約19億人</td>
-                <td>約5億人</td>
-            </tr>
-        </tbody>
-    </table>
+        <!-- ヘッダーとタイトル -->
+        <header class="pb-6 border-b border-gray-100 mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">
+                <span class="google-blue-text">G</span>
+                <span class="google-red-text">o</span>
+                <span class="google-yellow-text">o</span>
+                <span class="google-blue-text">g</span>
+                <span class="google-green-text">l</span>
+                <span class="google-red-text">e</span> スタイル コンテンツ メニュー
+            </h1>
+            <p class="text-gray-500 mt-1">以下のリンクから各コンテンツページへ移動してください。</p>
+        </header>
 
-    <div class="footer">
-        <p>このページは、ウェブ検索によって収集された情報に基づき作成されました。</p>
+        <!-- コンテンツリンクエリア (グリッドレイアウトに変更) -->
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- コンテンツ 1: 青 -->
+            <a href="content1.html" class="menu-link google-blue">コンテンツ 1 (青)</a>
+
+            <!-- コンテンツ 2: 赤 -->
+            <a href="content2.html" class="menu-link google-red">コンテンツ 2 (赤)</a>
+
+            <!-- コンテンツ 3: 黄 -->
+            <a href="content3.html" class="menu-link google-yellow">コンテンツ 3 (黄)</a>
+
+            <!-- コンテンツ 4: 緑 -->
+            <a href="content4.html" class="menu-link google-green">コンテンツ 4 (緑)</a>
+
+            <!-- コンテンツ 5: 青/赤 -->
+            <a href="content5.html" class="menu-link bg-gradient-to-r from-blue-500 to-red-500">コンテンツ 5 (青 & 赤)</a>
+
+            <!-- コンテンツ 6: 黄/緑 -->
+            <a href="content6.html" class="menu-link bg-gradient-to-r from-yellow-500 to-green-500">コンテンツ 6 (黄 & 緑)</a>
+        
+        </main>
+
+        <!-- フッター -->
+        <footer class="p-4 text-center text-sm text-gray-400 border-t border-gray-100 mt-8">
+            &copy; 2025 Googleカラースタイルデモ. 全てのコンテンツは個別のファイルに分離されました。
+        </footer>
+
     </div>
-
 </body>
 </html>
